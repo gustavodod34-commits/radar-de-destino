@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar de Destino | Clima & CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="caixa-principal">
+        <h1>Radar de Destino 🌍</h1>
+        <p>Digite um CEP para descobrir a cidade e o clima atual</p>
+
+        <div class="area-busca">
+            <input type="text" id="inputCep" placeholder="Ex: 01001-000" maxlength="9">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+
+        <p id="msgErro" class="erro escondido"></p>
+
+        <div id="resultado" class="escondido">            
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

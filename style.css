@@ -1,0 +1,107 @@
+/* Reseta as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* O truque do flexbox para centralizar tudo na tela */
+body{ 
+    background-color: #e0f7fa; /* Azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+/* A caixa principal */
+.caixa-principal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px; /* Não deixa ficar gigante no PC */
+    padding: 30px;
+    border-radius: 15px; /*  Arredondas as bordas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombreamento da borda */
+    text-align: center;
+}
+
+.caixa-principal h1 {
+    color: #0277bd;
+    margin-bottom: 10px;
+}
+
+.caixa-principal p {
+    color: #555; 
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Organizando o input e o botão do lado */
+.area-busca {
+    display: flex;
+    gap: 10px; /* Espaçamento entre a caixa e o botão */
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1; /* Faz o input crescer e ocupar o espaço que sobrar */
+    padding: 12px;
+    border: 2px solid #b3e5fc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus{
+    border-color: #0277bd; /* Muda a cor quando clica dentro */
+}
+
+button {
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #01579b; /* Fica mais escuro quando o mouse passa por cima */
+}
+
+/* A caixa onde o resultado vai aparecer (escondida por padrão) */
+#resultado {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #8bc34a;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Classe para esconder a caixa de resultado quando não tiver nada nela */
+.escondido {
+    display: none;
+}
+
+/* Estilo para as mensagens de erro na tela */
+.erro {
+    background-color: #ffebee; /* Fundo vermelho claro*/ 
+    color: #c62828; /* Texto vermelho escuro para contrastar*/
+    border: 1px solid #ef5350; /* Bordinha vermelha*/
+    padding: 15px;
+    border-radius: 8px; /* Bordas arredondadas igual a caixa principal*/
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(229, 57, 53, 0.12); /* Sombra avermelhada*/
+}
+
+/* Quando o botão estiver desativado */
+button:disabled {
+    background-color: #90caf9; /* Um azul mais desbotado*/
+    cursor: not-allowed; /* Icone bloqueado no mouse*/
+}
